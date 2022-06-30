@@ -9,6 +9,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@contentful/rich-text-html-renderer": "^15.13.1",
     "contentful": "^9.1.32",
     "core-js": "^3.19.3",
     "nuxt": "^2.15.8",
