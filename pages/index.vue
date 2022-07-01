@@ -1,6 +1,6 @@
 <template>
 	<div>
-<!--		<pre>{{ homepage.fields.faqs }}</pre>-->
+		<pre>{{ homepage.fields.logos }}</pre>
 		<header>
 			<nav>
 				<!-- <div class="announcement">The SaaS Network Ireland Summer BBQ is June 27th at The Dubliner Pub, Ballsbridge, Dublin! <a target="_blank" href="https://ti.to/saas-network-ireland/saas-network-ireland-summer-bbq">Find out more</a></div> -->
@@ -50,7 +50,7 @@
 		<section id="members">
 			<div class="container">
                 <template v-for="logo in homepage.fields.logos" >
-							<div class="question">{{ logo.fields.logos }}</div>
+							<img src="logo.fields.fields.url"/>
 					</template>
 				<!---<h2>Our Members</h2>
 				<a href='http://www.jumble.io' title='jumble.io' rel='noopener noreferrer' target='_blank'><img src='~/assets/images/logos/jumble.io.png?cachebust=2' alt='jumble.io'/></a>
