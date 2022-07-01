@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<pre>{{ homepage.fields.faqs }}</pre>
+<!--		<pre>{{ homepage.fields.faqs }}</pre>-->
 		<header>
 			<nav>
 				<!-- <div class="announcement">The SaaS Network Ireland Summer BBQ is June 27th at The Dubliner Pub, Ballsbridge, Dublin! <a target="_blank" href="https://ti.to/saas-network-ireland/saas-network-ireland-summer-bbq">Find out more</a></div> -->
@@ -38,7 +38,7 @@
 					<div class="col-sm-6">
 						<h2><span class="about">About</span> SaaS Network <span class="ireland">Ireland</span></h2>
 					</div>
-					<div class="col-sm-6" v-html="aboutCopy"></div>
+					<div class="col-sm-6" v-html="aboutCopy" />
 				</div>
 			</div>
 		</section>
@@ -130,52 +130,24 @@
 									fill="#cfcfcf"/>
 							</svg>
 						</div>
-						<div class="col-sm-6" v-html="criteriaCopy">
-
-						</div>
+						<div class="col-sm-6" v-html="criteriaCopy" />
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<section id="faqs">
-			<div class="container" v-for="faq in homepage.fields.faqs" :key="faq.faqsSection">
-				<pre>{{ faq }}</pre>
+			<div class="container">
 				<h2>{{ homepage.fields.faqHeading }}</h2>
 				<dl>
-					<dt>
-						<a class="question" href="javascript:;">{{ faq.fields.question }}</a>
-					</dt>
-					<dd>
-						<div class="answer"></div>
-					</dd>
-					<dt>
-						<a class="question" href="javascript:;">Will the website be improved? Will there be online
-							forums, member
-							logins etc.</a>
-					</dt>
-					<dd>
-						<div class="answer"></div>
-					</dd>
-					<dt>
-						<a class="question" href="javascript:;">{{ faq.fields.question }}</a>
-					</dt>
-					<dd>
-						<div class="answer"></div>
-					</dd>
-					<dt>
-						<a class="question" href="javascript:;">{{ faq.fields.question }}</a>
-					</dt>
-					<dd>
-						<div class="answer"></div>
-					</dd>
-					<dt>
-						<a class="question" href="javascript:;">I don't have X/I'm not a Y, can I join?</a>
-					</dt>
-					<dd>
-						<div class="answer">
-						</div>
-					</dd>
+					<template v-for="faq in homepage.fields.faqs" >
+						<dt>
+							<a class="question">{{ faq.fields.question }}</a>
+						</dt>
+						<dd>
+							<div class="answer" v-html="formatContentfulRichText(faq.fields.answer)" />
+						</dd>
+					</template>
 				</dl>
 
 				<p class="contact">You don’t see your question in the list above or you want to say hi? <span
@@ -223,16 +195,6 @@
 				client.getEntries({
 					'sys.id': '3SEoy4GbuqusJUESfH8CIp',
 				}),
-
-				client.getEntries().then(function (entries) {
-					// log the title for all the entries that have it
-					entries.items.forEach(function (homepage) {
-						if (homepage.fields.faqs) {
-							console.log(homepage.fields.faqs);
-						}
-					})
-				})
-
 			])
 				.then(([entries]) => {
 					const homepage = entries.items[0];
@@ -245,5 +207,11 @@
 				})
 				.catch(console.error);
 		},
+
+		methods: {
+			formatContentfulRichText(field) {
+				return documentToHtmlString(field);
+			}
+		}
 	};
 </script>
