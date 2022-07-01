@@ -50,7 +50,7 @@
 		<section id="members">
 			<div class="container">
                 <template v-for="logo in homepage.fields.logos" >
-							<img src="logo.fields.fields.url"/>
+							<img src="logo.fields.fields.file.url"/>
 					</template>
 				<!---<h2>Our Members</h2>
 				<a href='http://www.jumble.io' title='jumble.io' rel='noopener noreferrer' target='_blank'><img src='~/assets/images/logos/jumble.io.png?cachebust=2' alt='jumble.io'/></a>
