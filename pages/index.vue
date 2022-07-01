@@ -1,5 +1,7 @@
 <template>
+
     <div>
+        <pre>{{ homepage.fields.faqs }}</pre>
         <header>
 			<nav>
 				<!-- <div class="announcement">The SaaS Network Ireland Summer BBQ is June 27th at The Dubliner Pub, Ballsbridge, Dublin! <a target="_blank" href="https://ti.to/saas-network-ireland/saas-network-ireland-summer-bbq">Find out more</a></div> -->
@@ -39,9 +41,9 @@
 				<h2>Our Members</h2>
 				</div>
 				</section>
-		<!----<section id="members">
+		<section id="members">
 			<div class="container">
-				<h2>Our Members</h2>
+				<!---<h2>Our Members</h2>
 				<a href='http://www.jumble.io' title='jumble.io' rel='noopener noreferrer' target='_blank'><img src='~/assets/images/logos/jumble.io.png?cachebust=2' alt='jumble.io'/></a>
                 <a href='http://www.cultureark.com' title='cultureark.com' rel='noopener noreferrer' target='_blank'><img src='~/assets/images/logos/cultureark.com.png?cachebust=2' alt='cultureark.com'/></a>
                 <a href='http://www.workcompass.com' title='workcompass.com' rel='noopener noreferrer' target='_blank'><img src='~/assets/images/logos/workcompass.com.png?cachebust=2' alt='workcompass.com'/></a>
@@ -90,26 +92,18 @@
                 <a href='http://www.gymix.ie' title='gymix.ie' rel='noopener noreferrer' target='_blank'><img src='~/assets/images/logos/gymix.com.jpg?cachebust=2' alt='gymix.ie'/></a><a href='http://www.mindmybusiness.ie' title='mindmybusiness.ie' rel='noopener noreferrer' target='_blank'><img src='~/assets/images/logos/mindmybusiness.ie.png?cachebust=2' alt='mindmybusiness.ie'/></a><a href='http://www.Sensorpro.net' title='Sensorpro.net' rel='noopener noreferrer' target='_blank'><img src='~/assets/images/logos/Sensorpro.net.png?cachebust=2' alt='Sensorpro.net'/></a><a href='http://www.glofox.com' title='glofox.com' rel='noopener noreferrer' target='_blank'><img src='~/assets/images/logos/glofox.com.png?cachebust=2' alt='glofox.com'/></a><a href='http://www.fileexpenses.com' title='fileexpenses.com' rel='noopener noreferrer' target='_blank'><img src='~/assets/images/logos/fileexpenses.com.png?cachebust=2' alt='fileexpenses.com'/></a>
                 <a href='http://www.traitly.com' title='traitly.com' rel='noopener noreferrer' target='_blank'><img src='~/assets/images/logos/traitly.com.jpg?cachebust=2' alt='traitly.com'/></a><a href='http://www.sonru.com' title='sonru.com' rel='noopener noreferrer' target='_blank'><img src='~/assets/images/logos/sonru.com.png?cachebust=2' alt='sonru.com'/></a><a href='http://www.quickminutes.com' title='quickminutes.com' rel='noopener noreferrer' target='_blank'><img src='~/assets/images/logos/quickminutes.com.png?cachebust=2' alt='quickminutes.com'/></a>
                  <a href='http://www.bookapitch.com' title='bookapitch.com' rel='noopener noreferrer' target='_blank'><img src='~/assets/images/logos/bookapitch.com.png?cachebust=2' alt='bookapitch.com'/></a><a href='https://www.upscaler.io' title='upscaler.io' rel='noopener noreferrer' target='_blank'><img src='~/assets/images/logos/upscaler.png' alt='upscaler.io'/></a>			</div>
-		</section> -->
+		 --></div></section>
 
 		<section id="criteria">
 			<div class="container">
 				<div class="content">
-					<h2>Criteria to be a member of SaaS Network Ireland</h2>
+					<h2>{{homepage.fields.criteriaHeading}}</h2>
 					<div class="row">
 						<div class="col-sm-6 hidden-xs">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 491 530.75" width="491" height="531"><title>criteria</title><defs><filter id="blur"><feGaussianBlur stdDeviation="15"></feGaussianBlur></filter></defs><path d="M215.72 0L34.89 181a119.36 119.36 0 0 0 0 168.67l180.81-181A119.36 119.36 0 0 0 215.72 0zm50.76 159.93L56 370.78a119 119 0 0 0 168.34.14l.14-.14 210.57-210.85a119 119 0 0 0-168.34-.22zM275.3 362a119.36 119.36 0 0 0 0 168.72l180.81-181a119.36 119.36 0 0 0 0-168.67z" fill="#00b4ff"/><path fill="#fff" d="M79 135.33h116V394H79z"/><rect x="187.13" y="76" width="126.67" height="20" rx="3.94" ry="3.94" fill="#45c8ff"/><path class="shadow" fill="rgba(0,0,0,0.3)" d="M109.67 86h280v358h-280z"/><path fill="#fff" d="M109.67 86h280v358h-280z"/><path d="M247.78 121.25l-16.35 16.37a10.8 10.8 0 0 0 0 15.25l16.35-16.37a10.8 10.8 0 0 0 0-15.25zm4.59 14.46l-19 19.07a10.77 10.77 0 0 0 15.22 0l19-19.07a10.77 10.77 0 0 0-15.22 0zm.8 18.28a10.8 10.8 0 0 0 0 15.26l16.35-16.37a10.8 10.8 0 0 0 0-15.25z" fill="#00a2ff"/><path d="M323.42 201h-146v-4h146zm0 10h-146v4h146zm0 14h-146v4h146zm0 14h-146v4h146zm0 14h-146v4h146zm0 14h-146v4h146zm0 14h-146v4h146zm0 14h-146v4h146zm0 0h-146v4h146zm0 14h-146v4h146zm0 14h-146v4h146zm0 14h-146v4h146zm0 15h-146v4h146zm0 14h-146v4h146zm0 14h-146v4h146z" fill="#cfcfcf"/></svg>
 						</div>
-						<div class="col-sm-6">
-							<ul>
-								<li>Have a product website and customers.</li>
-								<li>Business based or founded in Ireland.</li>
-								<li>Support self-service SaaS: customers can sign up and trial your product, pay by credit card, and cancel the subscription anytime.</li>
-								<li>Provide enterprise/demo SaaS: demos show the actual product and you have existing customers.</li>
-								<li>Payment via credit card available.</li>
-								<li>CEO and optionally CTO/CFO’s agree to making themselves available to other members for a maximum of 2 hours a month, when possible.</li>
-
-							</ul>
+						<div class="col-sm-6" v-html="criteriaCopy">
+							
 						</div>
 					</div>
 				</div>
@@ -117,47 +111,40 @@
 		</section>
 
 		<section id="faqs">
-			<div class="container">
-				<h2>Frequently Asked Questions</h2>
+			<div class="container" v-for="faq in homepage.fields.faqs" :key="faq.faqsSection">
+            <pre>{{faq}}</pre>
+				<h2>{{ homepage.fields.faqHeading }}</h2>
 				<dl>
 					<dt>
-						<a class="question" href="javascript:;">Will there be networking events?</a>
+						<a class="question" href="javascript:;">{{ faq.fields.question }}</a>
 					</dt>
 					<dd>
-						<div class="answer">In general very few - we feel that too many networking events are a distraction from growing your business. We held our kick off event on 15th February in Dublin and intend to host only one truly interactive yearly meetup.</div>
+						<div class="answer"></div>
 					</dd>
 					<dt>
 						<a class="question" href="javascript:;">Will the website be improved? Will there be online forums, member logins etc.</a>
 					</dt>
 					<dd>
-						<div class="answer">No. For now the plan is to keep this extremely low-tech. You will have access to a Google Sheet with the other members’ details.</div>
+						<div class="answer"></div>
 					</dd>
 					<dt>
-						<a class="question" href="javascript:;">What happens if I get a request but have a busy month or have already committed my 2 hours?</a>
+						<a class="question" href="javascript:;">{{ faq.fields.question}}</a>
 					</dt>
 					<dd>
-						<div class="answer">No problem, just say that your agenda is full this month. They can ask again in another month. It should be “first come first served” and also fairly low committal - your own business comes first.</div>
+						<div class="answer"></div>
 					</dd>
 					<dt>
-						<a class="question" href="javascript:;">Should the meeting be in person or online?</a>
+						<a class="question" href="javascript:;">{{ faq.fields.question}}</a>
 					</dt>
 					<dd>
-						<div class="answer">Entirely up to you. Whatever works best for the person whose time is being asked for.</div>
+						<div class="answer"></div>
 					</dd>
 					<dt>
 						<a class="question" href="javascript:;">I don't have X/I'm not a Y, can I join?</a>
 					</dt>
 					<dd>
-						<div class="answer">
-							<ul>
-								<li>I don't have a website yet but it's on the way, can I join?</li>
-								<li>I don't do self-service yet but it's on the way, can I join?</li>
-								<li>I make online software but it's not your strict definition of true SaaS, can I join?</li>
-								<li>We only take invoices, can I join?</li>
-								<li>I am SaaS but don’t provide a self-service sign-up option, can I join?</li>
-							</ul>
-							Sorry, no. It's not to be snobby but in order to share and receive some expertise we should all operate in the same space.
-						</div>
+						<div class="answer" >
+                        </div>
 					</dd>
 				</dl>
 
@@ -167,7 +154,7 @@
 
 		<section id="apply">
 			<div class="container">
-				<h2>Join SaaS Network Ireland</h2>
+				<h2>{{ homepage.fields.formHeading}}</h2>
 				<!-- <a href="javascript:;" class="linkedin-signup">
 					<span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.08 43.75"><title>linkedin</title><path fill="#fff" d="M14.17 34.57v-18.3H8.52v18.3h5.66zm0-24.78a2.78 2.78 0 0 0-2.9-2.88 2.79 2.79 0 0 0-2.93 2.88 2.77 2.77 0 0 0 2.86 2.88 2.79 2.79 0 0 0 2.97-2.88zm9.23 24.78V24.15a4.24 4.24 0 0 1 .2-1.51 3.4 3.4 0 0 1 3.18-2.27c2.25 0 3.65 1.27 3.65 3.78v10.42h5.69v-10.7c0-5.73-3.06-8.4-7.14-8.4a6.18 6.18 0 0 0-5.63 3.15v-2.45h-5.64c.08 1.75 0 18.41 0 18.41h5.69z"/></svg></span>
 					<span class="text">Apply with Linkedin</span>
@@ -201,13 +188,22 @@
                         client.getEntries({
                             'sys.id': '3SEoy4GbuqusJUESfH8CIp',
                         }),
+                        
+                        client.getEntries().then(function (entries) {
+                        // log the title for all the entries that have it
+                        entries.items.forEach(function ( homepage ) {
+                        if (homepage.fields.faqs) {
+                        console.log(homepage.fields.faqs); }})
+                        })
+
                     ])
                     .then(([entries]) => {
-                        const homepage = entries.items[0];                       
+                        const homepage = entries.items[0];                      
 
                         return {
                             homepage: homepage,
-                            aboutCopy: documentToHtmlString(homepage.fields.aboutCopy)
+                            aboutCopy: documentToHtmlString(homepage.fields.aboutCopy),
+                            criteriaCopy: documentToHtmlString(homepage.fields.criteriaCopy),
                         };
                     })
                     .catch(console.error);
