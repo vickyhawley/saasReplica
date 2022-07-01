@@ -49,7 +49,9 @@
 		</section>
 		<section id="members">
 			<div class="container">
-                <div>{{ homepage.fields.logos }}</div>
+                <template v-for="logo in homepage.fields.logos" >
+							<div class="question">{{ logo.fields.logos }}</div>
+					</template>
 				<!---<h2>Our Members</h2>
 				<a href='http://www.jumble.io' title='jumble.io' rel='noopener noreferrer' target='_blank'><img src='~/assets/images/logos/jumble.io.png?cachebust=2' alt='jumble.io'/></a>
 						<a href='http://www.cultureark.com' title='cultureark.com' rel='noopener noreferrer' target='_blank'><img src='~/assets/images/logos/cultureark.com.png?cachebust=2' alt='cultureark.com'/></a>
