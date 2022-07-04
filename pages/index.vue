@@ -184,7 +184,8 @@
 				<h2>{{ homepage.fields.faqHeading }}</h2>
 				<dl>
 					<template v-for="faq in homepage.fields.faqs" >
-						<dt @click="open= !open">
+						<dt :class="{ open: questionSelected }"
+                        @click="questionSelectedNow('question')">
 							<a class="question">{{ faq.fields.question }}</a>
 						</dt>
 						<dd v-if="open">
@@ -225,18 +226,28 @@
 	</div>
 </template>
 
-<script>
+<script >
 	import {createClient} from '~/plugins/contentful.js';
 	import {documentToHtmlString} from '@contentful/rich-text-html-renderer';
 
 
 	const client = createClient();
+	const app = Vue.createApp({
+		data() {
+			return {
+				questionSelected: false
+			};
+		},
+		methods: {
+			questSelected(quest) {
+				if ( quest === A ) {
+					this.questionSelected = true;
+				}
+			}
+		}
 
-    var open = document.querySelector('.question');
-// using add method
-// adding single class
-open.classList.add('open');
-
+	});
+	app.mount('#faqs');
 
 	export default {
 		// `env` is available in the context object
@@ -254,6 +265,8 @@ open.classList.add('open');
 						homepage: homepage,
 						aboutCopy: documentToHtmlString(homepage.fields.aboutCopy),
 						criteriaCopy: documentToHtmlString(homepage.fields.criteriaCopy),
+						questionSelected: false,
+						app: app
                     };
 				})
 				.catch(console.error);
