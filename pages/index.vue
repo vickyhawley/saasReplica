@@ -217,7 +217,7 @@
 						<input type="text" name="company" required="required" placeholder="Your company">
 						<input type="text" name="role" required="required" placeholder="Role in the company">
 						<input type="text" name="profileUrl" required="required" placeholder="Linkedin profile URL">
-						<button type="submit">Apply Now</button>
+						<button type="submit">Apply Now!</button>
 					</form>
 				</div>
 				<div class="user-card"></div>
